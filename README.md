@@ -1,4 +1,5 @@
 # TODO LIST
+[Documentation](https://docs.google.com/document/d/1rYMVuXdiCA8LN0GXwm1aoASgVpJ0nh3UlVBPU3gckf4/edit?usp=sharing)
 
 ## Build Setup
 
