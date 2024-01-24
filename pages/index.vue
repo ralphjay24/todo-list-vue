@@ -118,15 +118,10 @@ export default {
       defTodos: [],
     }
   },
-  async fetch() {
-    await fetch('https://dummyjson.com/todos?limit=3')
-      .then(res => res.json())
-      .then(arr => {
-        this.defTodos = arr.todos.map(v => ({
-          ...v,
-          label: v.todo,
-        }))
-      })
+  async asyncData({ $repository }) {
+    return $repository.todos.index().then(res => ({
+      defTodos: res
+    }))
   },
   computed: {
     ...mapState({
